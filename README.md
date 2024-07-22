@@ -105,14 +105,20 @@ The application requires two arguments:
 
 ## Code Structure
 
-- Main Method: Validates arguments and calls the appropriate method based on the specified language.
-- Static Analysis Methods:
+- **Main Method:**
+  - Validates that exactly two arguments are provided (the language and file path).
+  - Checks if the file exists and is a valid file.
+  - Calls the appropriate method to analyze the file based on the provided language.
+
+- **Static Analysis Methods:**
   - `checkCode_Java(String filePath)`
   - `checkCode_Python(String filePath)`
   - `checkCode_C_Cpp(String filePath)`
   - `checkCode_JS(String filePath)`
-- executeCmd(String[] command): Executes the system command and processes its output.
-- reviewRecmd(String output): Provides recommendations based on the tool's output.
+
+- **executeCmd(String[] command):** Executes the system command and processes its output.
+
+- **reviewRecmd(String output):** Provides recommendations based on the tool's output.
 
 ## Recommendatiions
 
@@ -120,3 +126,7 @@ The application requires two arguments:
   - Keep dependencies up to date to avoid known vulnerabilities.
   - Implement proper error handling to avoid leaking sensitive information.
   - Regularly perform security testing and code reviews.
+
+## Support
+
+For any issues or questions, please open an issue on the GitHub repository or contact the author.
